@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "votes": 24,
+    "title": "PHP Course",
+    "hashtags": ["course", "programming"],
+    "stage": "suggestions"
+  },
+  {
+    "id": 2,
+    "votes": 18,
+    "title": "Laravel From Scratch",
+    "hashtags": ["course", "programming"],
+    "stage": "suggestions"
+  },
+  {
+    "id": 3,
+    "votes": 250,
+    "title": "ReactJS From Scratch",
+    "hashtags": ["course", "programming"],
+    "stage": "suggestions"
+  },
+  {
+    "id": 4,
+    "votes": 20,
+    "title": "NodeJS",
+    "hashtags": ["course", "programming"],
+    "stage": "suggestions"
+  },
+  {
+    "id": 5,
+    "votes": 56,
+    "title": "Angular From Scratch",
+    "hashtags": ["course", "programming"],
+    "stage": "suggestions"
+  },
+  {
+    "id": 6,
+    "votes": 126,
+    "title": "CSSGrid Course",
+    "hashtags": ["course", "programming"],
+    "stage": "planned"
+  }
+]
