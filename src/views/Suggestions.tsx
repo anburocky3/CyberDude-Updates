@@ -1,5 +1,5 @@
 function SuggestionPage() {
-    return (<div>Suggestion Page</div>);
+  return <div className="p-5">Suggestion Page</div>;
 }
 
 export default SuggestionPage;
