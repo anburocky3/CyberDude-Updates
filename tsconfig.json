@@ -17,7 +17,9 @@
     "jsx": "react-jsx",
     "paths": {
       "@components/*": ["./src/components/*"],
-      "@views/*": ["./src/views/*"]
+      "@views/*": ["./src/views/*"],
+      "types/*": ["./src/types/*"],
+      "@helpers/*": ["./src/helpers/*"]
     }
   },
   "include": ["src"],

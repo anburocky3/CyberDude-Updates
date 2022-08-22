@@ -2,29 +2,15 @@ import RoadmapCard from '@components/commons/cards/RoadmapCard';
 import RoadmapCardItem from '@components/commons/cards/RoadmapCardItem';
 import { useEffect, useState } from 'react';
 import api from '../api';
-
-enum Stages {
-  suggestions = 'suggestions',
-  planned = 'planned',
-  inDevelopment = 'in-development',
-  readyToWatch = 'ready-to-watch',
-}
-
-type SuggestionType = {
-  id: number;
-  votes: number;
-  title: string;
-  hashtags: string[];
-  stage: string;
-};
+import { Suggestions } from 'types/Global';
 
 function RoadmapPage() {
-  const [suggestions] = useState<SuggestionType[]>(api);
+  const [suggestions] = useState<Suggestions[]>(api);
 
   const filterItems = (type: string) => {
     return suggestions
       .filter((suggestion) => suggestion.stage === type)
-      .map(({ id, votes, title, hashtags, stage }) => (
+      .map(({ id, votes, title, hashtags, stage, createdAt }) => (
         <RoadmapCardItem
           key={id}
           votes={votes}

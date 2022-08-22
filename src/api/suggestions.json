@@ -3,42 +3,84 @@
     "id": 1,
     "votes": 24,
     "title": "PHP Course",
+    "description": "By the end of this course, you will have an in-depth understanding of PHP and how it can work with HTML and databases in the creation of dynamic web applications. Start Learning For FREE.",
     "hashtags": ["course", "programming"],
-    "stage": "suggestions"
+    "stage": "suggestions",
+    "createdAt": "2015-11-05 14:29:36",
+    "user": {
+      "id": 1,
+      "name": "Anbuselvan Rocky",
+      "mobile": "+919876541235"
+    }
   },
   {
     "id": 2,
     "votes": 18,
     "title": "Laravel From Scratch",
+    "description": "PHP Course",
     "hashtags": ["course", "programming"],
-    "stage": "suggestions"
+    "stage": "suggestions",
+    "createdAt": "2015-11-05 14:29:36",
+    "user": {
+      "id": 1,
+      "name": "Anbuselvan Rocky",
+      "mobile": "+919876541235"
+    }
   },
   {
     "id": 3,
     "votes": 250,
     "title": "ReactJS From Scratch",
+    "description": "PHP Course",
     "hashtags": ["course", "programming"],
-    "stage": "suggestions"
+    "stage": "suggestions",
+    "createdAt": "2015-11-05 14:29:36",
+    "user": {
+      "id": 1,
+      "name": "Anbuselvan Rocky",
+      "mobile": "+919876541235"
+    }
   },
   {
     "id": 4,
     "votes": 20,
     "title": "NodeJS",
+    "description": "PHP Course",
     "hashtags": ["course", "programming"],
-    "stage": "suggestions"
+    "stage": "suggestions",
+    "createdAt": "2015-11-05 14:29:36",
+    "user": {
+      "id": 2,
+      "name": "Suresh Raina",
+      "mobile": "+919876541235"
+    }
   },
   {
     "id": 5,
     "votes": 56,
     "title": "Angular From Scratch",
+    "description": "PHP Course",
     "hashtags": ["course", "programming"],
-    "stage": "suggestions"
+    "stage": "suggestions",
+    "createdAt": "2015-11-05 14:29:36",
+    "user": {
+      "id": 3,
+      "name": "Bahubali Khan",
+      "mobile": "+919876541235"
+    }
   },
   {
     "id": 6,
     "votes": 126,
     "title": "CSSGrid Course",
+    "description": "PHP Course",
     "hashtags": ["course", "programming"],
-    "stage": "planned"
+    "stage": "planned",
+    "createdAt": "2015-11-05 14:29:36",
+    "user": {
+      "id": 4,
+      "name": "Rocky Bhai",
+      "mobile": "+919876541235"
+    }
   }
 ]

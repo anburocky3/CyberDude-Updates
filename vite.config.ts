@@ -39,6 +39,8 @@ export default defineConfig({
     alias: {
       '@components': path.resolve(__dirname, './src/components'),
       '@views': path.resolve(__dirname, './src/views'),
+      types: path.resolve(__dirname, './src/types'),
+      '@helpers': path.resolve(__dirname, './src/helpers'),
     },
   },
   server: {
