@@ -1,4 +1,4 @@
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import { ButtonSizes, Stages } from 'types/Global';
 
 export const stageClasses = (stage: Stages) => {
@@ -31,6 +31,5 @@ export const getSizeClasses = (size: ButtonSizes | undefined) => {
 };
 
 export const dateFormat = (value: string, format?: string) => {
-  const dayJS = dayjs(value);
-  return format ? dayJS.format(format) : dayJS.format('D MMM, YYYY');
+  return dayjs(value).format('D MMM, YYYY');
 };
