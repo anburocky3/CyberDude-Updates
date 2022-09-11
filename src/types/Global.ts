@@ -34,4 +34,29 @@ export type Button = {
   size?: ButtonSizes | undefined;
   variant?: string;
   label: string;
+  onClick?: CallableFunction
 };
+
+export type InputEvent = {
+  target : {
+    value: string,
+    name: string
+  },
+}
+
+export type LoginCredentials = {
+  user: string,
+  pass: string
+}
+
+export type AuthCheck = {
+  isAuthenticated: Boolean,
+  loading: Boolean
+}
+
+export type Course = {
+  title: string,
+  last_update: string,
+  desc: string,
+  tags: string[]
+}

@@ -1,10 +1,10 @@
 import { getSizeClasses } from '@helpers/Global';
 import { Button as MyButton } from 'types/Global';
 
-const Button = ({ icon, size, variant, label }: MyButton) => {
+const Button = ({ icon, size, variant, label, onClick }: MyButton) => {
   const sizeData = getSizeClasses(size);
-  const generic = sizeData + ' rounded  font-medium flex items-center';
-  const primary = generic + ' shadow bg-primary text-white hover:bg-orange-600';
+  const generic = sizeData + ' rounded  font-medium flex items-center text-center';
+  const primary = generic + ' shadow orange-gradient text-white hover:bg-orange-600';
   const secondary = generic + ' bg-white text-black border hover:bg-gray-50';
 
   let theme = '';
@@ -20,8 +20,8 @@ const Button = ({ icon, size, variant, label }: MyButton) => {
   }
 
   return (
-    <button className={theme}>
-      <div className="pr-2">{icon}</div>
+    <button className={theme} onClick={() => onClick ? onClick() : null}>
+      { icon ? <div className="pr-2">{icon}</div> : ""}
       {label}
     </button>
   );

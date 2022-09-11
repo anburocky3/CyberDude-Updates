@@ -7,3 +7,38 @@
 body {
     @apply font-inter
 }
+
+.orange-gradient {
+    background: linear-gradient(0deg, #EB5757 15.1%, #FF7800 81.77%);
+}
+
+.jump-label {
+    position: relative;
+}
+  
+.jump-input {
+font-size: inherit;
+font-family: inherit;
+line-height: 1.6em;
+outline: 2px solid transparent;
+outline-offset: 2px;
+border-bottom: 2px solid #000;
+}
+
+.jump-span {
+position: absolute;
+opacity: 0.6;
+top: 0;
+left: 0;
+cursor: text;
+transition: all 0.3s ease-in-out;
+}
+
+.jump-input.has-value + .jump-span,
+.jump-input:focus + .jump-span {
+color: #ee5522;
+opacity: 1;
+transform: translate(0px, -1.8em);
+font-size: 0.8em;
+cursor: default;
+}
