@@ -5,14 +5,18 @@ import ClarityMapOutlineAlerted from '../icons/ClarityMapOutlineAlerted';
 import Button from './buttons/Button';
 import Input from './forms/Input';
 import MenuLink from './menus/MenuLink';
-import MaterialSymbolsMenu from '@components/icons/MaterialSymbolsMenu';
 import { useState } from 'react';
 import { AuthCheck } from 'types/Global';
 import { Avatar, Image } from 'antd';
 import { Logout } from '../../firebase/functions';
 import { useNavigate } from "react-router-dom";
 
-function TheNavbar({ isAuthenticated , loading } : AuthCheck ) {
+type props = {
+  isAuthenticated: Boolean,
+  loading: Boolean,
+  setIsAuthenticated: CallableFunction
+}
+function TheNavbar({ isAuthenticated , loading , setIsAuthenticated } : props ) {
   const [menuOpened, setMenuOpened] = useState<boolean>(false);
   const navigate = useNavigate()
 
@@ -22,6 +26,7 @@ function TheNavbar({ isAuthenticated , loading } : AuthCheck ) {
   function HandleLogout() {
     Logout().then(e => {
       navigate("/")
+      setIsAuthenticated(false)
       alert("Logged out successfully")
     })
     .catch(e => {
@@ -81,8 +86,8 @@ function TheNavbar({ isAuthenticated , loading } : AuthCheck ) {
           </div>
           {
             !loading ? !isAuthenticated ? <div className="space-x-4 flex items-center">
-            <Button variant="secondary" label={'Login'} />
-            <Button label={'Sign Up'} />
+            <Button variant="secondary" label={'Login'} onClick={() => navigate('/login')} />
+            <Button label={'Sign Up'} className='cursor-not-allowed' />
           </div> :  <div className=" flex items-center ">
             <Button label={'Sign Out'} onClick={() => HandleLogout()}/>
             <p className='my-auto text-lg mx-4'>{ "Hello Cyberdude," }</p>

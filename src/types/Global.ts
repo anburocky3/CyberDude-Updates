@@ -34,7 +34,8 @@ export type Button = {
   size?: ButtonSizes | undefined;
   variant?: string;
   label: string;
-  onClick?: CallableFunction
+  onClick?: CallableFunction;
+  className?: string
 };
 
 export type InputEvent = {
@@ -58,5 +59,32 @@ export type Course = {
   title: string,
   last_update: string,
   desc: string,
-  tags: string[]
+  className?: string,
+  tags: string[],
+  sessions?: {
+      session_name: string,
+      topics: {
+          topic_name: string,
+          topic_notes: string
+      }[]
+  }[]
+}
+
+export type SessionsType = {
+  data?: {
+    session_name: string,
+    topics: {
+        topic_name: string,
+        topic_notes: string
+    }[]
+  };
+  id: number
+}
+
+export type TopicType = {
+  data?: {
+    topic_name: string,
+    topic_notes: string
+  };
+  id: number
 }

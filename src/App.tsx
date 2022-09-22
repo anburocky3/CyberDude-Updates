@@ -10,6 +10,7 @@ import { getDataById } from './firebase/functions';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase/firebase';
 import "antd/dist/antd.css"
+import Session from '@views/Session';
 
 function App() {
   const [ isAuthenticated , setIsAuthenticated ] = useState<Boolean>(false)
@@ -17,35 +18,44 @@ function App() {
 
   useEffect(() => {
     document.title = 'CyberDude Updates';
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const uid = user.uid;
-        getDataById("user",uid as any)
-        .then(e => {
-          setIsAuthenticated(true)
+    try {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          const uid = user.uid;
+          getDataById("user",uid as any)
+          .then(e => {
+            setIsAuthenticated(true)
+            setLoading(false)
+          })
+          .catch(e => {
+            setLoading(false)
+          })
+        }
+        else {
           setLoading(false)
-        })
-        .catch(e => {
-          setLoading(false)
-        })
-      }
-      else {
-        setLoading(false)
-      }
-    });
+        }
+      });
+    } catch (error) {
+      console.log(error);
+      
+      setIsAuthenticated(false)
+      setLoading(false)
+    }
+    
   }, []);
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <TheNavbar loading={loading} isAuthenticated={isAuthenticated} />
+      <TheNavbar loading={loading} isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated}/>
 
       <main className="container mx-auto py-5 sm:py-10">
         <Routes>
           <Route path="/" element={<Navigate to="/roadmap" replace />} />
           <Route path="/roadmap" element={<RoadmapPage />} />
           <Route path="/suggestions" element={<SuggestionPage />} />
-          <Route path="/login" element={<Login isAuthenticated={isAuthenticated} loading={loading} />} />
+          <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated} loading={loading} />} />
           <Route path="/sessions" element={<ProtectedRoute isAuthenticated={isAuthenticated} loading={loading} Comp={<Sessions /> as JSX.Element}></ProtectedRoute>} />
+          <Route path="/sessions/:id" element={<ProtectedRoute isAuthenticated={isAuthenticated} loading={loading} Comp={<Session /> as JSX.Element}></ProtectedRoute>} />
         </Routes>
       </main>
     </div>

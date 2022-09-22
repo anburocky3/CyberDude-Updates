@@ -42,3 +42,11 @@ transform: translate(0px, -1.8em);
 font-size: 0.8em;
 cursor: default;
 }
+
+.ant-modal-header {
+    border-bottom: 0 none;
+}
+
+.ant-modal-footer {
+    border-top: 0 none;
+}

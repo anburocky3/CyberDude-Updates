@@ -1,8 +1,8 @@
 import { Badge } from "antd";
 import { Course } from "types/Global";
 
-export default function CourseCard({ title , desc , tags , last_update} : Course) {
-    return <div key={title} className="rounded-lg relative p-4 mx-auto md:mr-auto w-[25rem] h-48 bg-white shadow-lg hover:shadow-xl cursor-pointer">
+export default function CourseCard({ title , desc , tags , last_update , className } : Course) {
+    return <div key={title} className={`rounded-lg relative p-4 mx-auto md:mr-auto w-[25rem] h-48 bg-white shadow-lg hover:shadow-xl cursor-pointer ${className}`}>
         <div className="flex justify-between">
             <p className="text-lg font-bold">
                 {title}
