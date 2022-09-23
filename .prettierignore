@@ -3,3 +3,4 @@ package-lock.json
 yarn.lock
 netlify.toml
 yarn-error.log
+dist

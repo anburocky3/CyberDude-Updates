@@ -19,7 +19,8 @@ export default function Sessions() {
                 tags={e.tags}
                 title={e.title}
                 desc={e.desc}
-                last_update={e.last_update}
+                last_update={e.last_update} 
+                sessions={[]}              
               />
             </div>
           );
