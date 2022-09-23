@@ -20,7 +20,7 @@ const RoadmapCard = ({ badgeColor, title, total, children }: CardProps) => {
   return (
     <div className="bg-white p-5 rounded shadow max-w-sm hover:shadow-lg">
       <div className="flex items-center space-x-3">
-        <div className={'w-2 h-2 rounded-full ' + badgeColor}></div>
+        <div className={"w-2 h-2 rounded-full " + badgeColor}></div>
         <h4 className="font-medium">{title}</h4>
         <span className="text-gray-600 text-sm">({total})</span>
       </div>

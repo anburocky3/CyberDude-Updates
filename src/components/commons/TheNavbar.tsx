@@ -1,37 +1,38 @@
-import { Link } from 'react-router-dom';
-import AcademiconsIdeasRepec from '@components/icons/AcademiconsIdeasRepec';
-import TablerSearch from '@components/icons/TablerSearch';
-import ClarityMapOutlineAlerted from '../icons/ClarityMapOutlineAlerted';
-import Button from './buttons/Button';
-import Input from './forms/Input';
-import MenuLink from './menus/MenuLink';
-import { useState } from 'react';
-import { AuthCheck } from 'types/Global';
-import { Avatar, Image } from 'antd';
-import { Logout } from '../../firebase/functions';
+import { Link } from "react-router-dom";
+import AcademiconsIdeasRepec from "@components/icons/AcademiconsIdeasRepec";
+import TablerSearch from "@components/icons/TablerSearch";
+import ClarityMapOutlineAlerted from "../icons/ClarityMapOutlineAlerted";
+import Button from "./buttons/Button";
+import Input from "./forms/Input";
+import MenuLink from "./menus/MenuLink";
+import { useState } from "react";
+import { AuthCheck } from "types/Global";
+import { Avatar, Image } from "antd";
+import { Logout } from "../../firebase/functions";
 import { useNavigate } from "react-router-dom";
 
 type props = {
-  isAuthenticated: Boolean,
-  loading: Boolean,
-  setIsAuthenticated: CallableFunction
-}
-function TheNavbar({ isAuthenticated , loading , setIsAuthenticated } : props ) {
+  isAuthenticated: Boolean;
+  loading: Boolean;
+  setIsAuthenticated: CallableFunction;
+};
+function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
   const [menuOpened, setMenuOpened] = useState<boolean>(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const triggerMenu = () => {
     setMenuOpened(!menuOpened);
   };
   function HandleLogout() {
-    Logout().then(e => {
-      navigate("/")
-      setIsAuthenticated(false)
-      alert("Logged out successfully")
-    })
-    .catch(e => {
-      alert(e)
-    })
+    Logout()
+      .then((e) => {
+        navigate("/");
+        setIsAuthenticated(false);
+        alert("Logged out successfully");
+      })
+      .catch((e) => {
+        alert(e);
+      });
   }
   const closeMenu = () => {
     setMenuOpened(false);
@@ -84,17 +85,30 @@ function TheNavbar({ isAuthenticated , loading , setIsAuthenticated } : props ) 
               icon={<TablerSearch />}
             />
           </div>
-          {
-            !loading ? !isAuthenticated ? <div className="space-x-4 flex items-center">
-            <Button variant="secondary" label={'Login'} onClick={() => navigate('/login')} />
-            <Button label={'Sign Up'} className='cursor-not-allowed' />
-          </div> :  <div className=" flex items-center ">
-            <Button label={'Sign Out'} onClick={() => HandleLogout()}/>
-            <p className='my-auto text-lg mx-4'>{ "Hello Cyberdude," }</p>
-            <Avatar className='cursor-pointer' src="https://joeschmoe.io/api/v1/random" size={50}/>
-          </div> : ""
-          }
-          
+          {!loading ? (
+            !isAuthenticated ? (
+              <div className="space-x-4 flex items-center">
+                <Button
+                  variant="secondary"
+                  label={"Login"}
+                  onClick={() => navigate("/login")}
+                />
+                <Button label={"Sign Up"} className="cursor-not-allowed" />
+              </div>
+            ) : (
+              <div className=" flex items-center ">
+                <Button label={"Sign Out"} onClick={() => HandleLogout()} />
+                <p className="my-auto text-lg mx-4">{"Hello Cyberdude,"}</p>
+                <Avatar
+                  className="cursor-pointer"
+                  src="https://joeschmoe.io/api/v1/random"
+                  size={50}
+                />
+              </div>
+            )
+          ) : (
+            ""
+          )}
         </div>
       </div>
 

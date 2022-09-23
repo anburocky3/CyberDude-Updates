@@ -4,18 +4,27 @@ import { courses } from "@helpers/courses";
 import { useNavigate } from "react-router-dom";
 
 export default function Sessions() {
-    const navigate = useNavigate()
-    return <div>
-        <div className="flex justify-between">
-            <h2 className="text-xl my-8 font-bold">All Course Syllabus</h2>
-            <Button className="my-8" label="Create" />
-        </div>
-        <div className="flex justify-between gap-10 flex-wrap">
-            {
-                courses.map(e => {
-                   return <div onClick={() => navigate(`${e.title}`)}><CourseCard tags={e.tags} title={e.title} desc={e.desc} last_update={e.last_update}/></div>
-                })
-            }
-        </div>
+  const navigate = useNavigate();
+  return (
+    <div>
+      <div className="flex justify-between">
+        <h2 className="text-xl my-8 font-bold">All Course Syllabus</h2>
+        <Button className="my-8" label="Create" />
+      </div>
+      <div className="flex justify-between gap-10 flex-wrap">
+        {courses.map((e, i) => {
+          return (
+            <div key={e.title + i} onClick={() => navigate(`${e.title}`)}>
+              <CourseCard
+                tags={e.tags}
+                title={e.title}
+                desc={e.desc}
+                last_update={e.last_update}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
+  );
 }

@@ -1,8 +1,8 @@
 export enum Stages {
-  suggestions = 'suggestions',
-  planned = 'planned',
-  inDevelopment = 'in-development',
-  readyToWatch = 'ready-to-watch',
+  suggestions = "suggestions",
+  planned = "planned",
+  inDevelopment = "in-development",
+  readyToWatch = "ready-to-watch",
 }
 
 export type User = {
@@ -35,56 +35,49 @@ export type Button = {
   variant?: string;
   label: string;
   onClick?: CallableFunction;
-  className?: string
+  className?: string;
 };
 
 export type InputEvent = {
-  target : {
-    value: string,
-    name: string
-  },
-}
+  target: {
+    value: string;
+    name: string;
+  };
+};
 
 export type LoginCredentials = {
-  user: string,
-  pass: string
-}
+  user: string;
+  pass: string;
+};
 
 export type AuthCheck = {
-  isAuthenticated: Boolean,
-  loading: Boolean
-}
+  isAuthenticated: Boolean;
+  loading: Boolean;
+};
 
 export type Course = {
-  title: string,
-  last_update: string,
-  desc: string,
-  className?: string,
-  tags: string[],
-  sessions?: {
-      session_name: string,
-      topics: {
-          topic_name: string,
-          topic_notes: string
-      }[]
-  }[]
-}
+  title: string;
+  last_update: string;
+  desc: string;
+  className?: string;
+  tags: string[];
+  sessions: SessionType[];
+};
+export type SessionType = {
+  id: string;
+  session_name: string;
+  topics: TopicType[];
+};
 
-export type SessionsType = {
-  data?: {
-    session_name: string,
-    topics: {
-        topic_name: string,
-        topic_notes: string
-    }[]
-  };
-  id: number
-}
+export type SessionsData = {
+  data: SessionType;
+};
 
 export type TopicType = {
-  data?: {
-    topic_name: string,
-    topic_notes: string
-  };
-  id: number
-}
+  id: string;
+  topic_name: string;
+  topic_notes: string;
+};
+export type TopicData = {
+  data: TopicType;
+};

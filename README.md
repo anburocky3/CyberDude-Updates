@@ -1,4 +1,5 @@
 ## CyberDude Updates App
+
 Simple web app that tracks cyberdude updates like roadmap, suggestions etc.
 
 ## Features:
@@ -25,4 +26,5 @@ yarn dev
 - If you care, do contribute! We love contributions.
 
 ## Author:
+
 [Anbuselvan Rocky](https://fb.me/anburocky3)
