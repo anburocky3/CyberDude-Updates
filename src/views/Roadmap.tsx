@@ -1,8 +1,8 @@
-import RoadmapCard from '@components/commons/cards/RoadmapCard';
-import RoadmapCardItem from '@components/commons/cards/RoadmapCardItem';
-import { useEffect, useState } from 'react';
-import api from '../api';
-import { Suggestions } from 'types/Global';
+import RoadmapCard from "@components/commons/cards/RoadmapCard";
+import RoadmapCardItem from "@components/commons/cards/RoadmapCardItem";
+import { useEffect, useState } from "react";
+import api from "../api";
+import { Suggestions } from "types/Global";
 
 function RoadmapPage() {
   const [suggestions] = useState<Suggestions[]>(api);
@@ -26,30 +26,30 @@ function RoadmapPage() {
         <RoadmapCard
           badgeColor="bg-primary"
           title="Suggestions"
-          total={filterItems('suggestions').length}
+          total={filterItems("suggestions").length}
         >
-          {filterItems('suggestions')}
+          {filterItems("suggestions")}
         </RoadmapCard>
         <RoadmapCard
           badgeColor="bg-blue-600"
           title="Planned"
-          total={filterItems('planned').length}
+          total={filterItems("planned").length}
         >
-          {filterItems('planned')}
+          {filterItems("planned")}
         </RoadmapCard>
         <RoadmapCard
           badgeColor="bg-indigo-600"
           title="In Development"
-          total={filterItems('in-development').length}
+          total={filterItems("in-development").length}
         >
-          {filterItems('in-development')}
+          {filterItems("in-development")}
         </RoadmapCard>
         <RoadmapCard
           badgeColor="bg-green-600"
           title="Ready to Watch"
-          total={filterItems('ready-to-watch').length}
+          total={filterItems("ready-to-watch").length}
         >
-          {filterItems('ready-to-watch')}
+          {filterItems("ready-to-watch")}
         </RoadmapCard>
       </div>
     </div>

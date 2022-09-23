@@ -1,44 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    @apply font-inter
+  @apply font-inter;
 }
 
 .orange-gradient {
-    background: linear-gradient(0deg, #EB5757 15.1%, #FF7800 81.77%);
+  background: linear-gradient(0deg, #eb5757 15.1%, #ff7800 81.77%);
 }
 
 .jump-label {
-    position: relative;
+  position: relative;
 }
-  
+
 .jump-input {
-font-size: inherit;
-font-family: inherit;
-line-height: 1.6em;
-outline: 2px solid transparent;
-outline-offset: 2px;
-border-bottom: 2px solid #000;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1.6em;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-bottom: 2px solid #000;
 }
 
 .jump-span {
-position: absolute;
-opacity: 0.6;
-top: 0;
-left: 0;
-cursor: text;
-transition: all 0.3s ease-in-out;
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  cursor: text;
+  transition: all 0.3s ease-in-out;
 }
 
 .jump-input.has-value + .jump-span,
 .jump-input:focus + .jump-span {
-color: #ee5522;
-opacity: 1;
-transform: translate(0px, -1.8em);
-font-size: 0.8em;
-cursor: default;
+  color: #ee5522;
+  opacity: 1;
+  transform: translate(0px, -1.8em);
+  font-size: 0.8em;
+  cursor: default;
+}
+
+.ant-modal-header {
+  border-bottom: 0 none;
+}
+
+.ant-modal-footer {
+  border-top: 0 none;
+}
+
+pre {
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
 }

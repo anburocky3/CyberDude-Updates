@@ -13,7 +13,7 @@ const RoadmapCardItem = ({ votes, title, hashtags }: RoadmapCardItemProps) => {
       </div>
       <p className="text-sm text-gray-400 space-x-2">
         {hashtags.map((hashtag) => (
-          <a key={'#' + hashtag} href={`/hashtags/${hashtag}`}>
+          <a key={"#" + hashtag} href={`/hashtags/${hashtag}`}>
             #{hashtag}
           </a>
         ))}

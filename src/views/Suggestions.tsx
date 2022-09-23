@@ -1,11 +1,11 @@
-import Button from '@components/commons/buttons/Button';
-import Card from '@components/commons/cards/Card';
-import { ButtonSizes } from 'types/Global';
-import SuggestionCard from '@components/commons/cards/SuggestionCard';
-import api from '../api';
-import { Suggestions } from 'types/Global';
-import { useState } from 'react';
-import IcRoundPlus from '@components/icons/IcRoundPlus';
+import Button from "@components/commons/buttons/Button";
+import Card from "@components/commons/cards/Card";
+import { ButtonSizes } from "types/Global";
+import SuggestionCard from "@components/commons/cards/SuggestionCard";
+import api from "../api";
+import { Suggestions } from "types/Global";
+import { useState } from "react";
+import IcRoundPlus from "@components/icons/IcRoundPlus";
 
 function SuggestionPage() {
   const [suggestions] = useState<Suggestions[]>(api);
@@ -32,7 +32,7 @@ function SuggestionPage() {
     <div className="p-5 flex flex-col md:flex-row md:space-x-10 space-y-10 md:space-y-0">
       <div className="w-72">
         <Card
-          title={'Statuses'}
+          title={"Statuses"}
           className="sm:p-8"
           children={
             <ul className="pt-3">
@@ -59,7 +59,7 @@ function SuggestionPage() {
       <div className="flex-1 max-w-4xl md:p-5">
         <div className="flex justify-between items-center">
           <h4 className="text-2xl font-bold">Suggestions</h4>
-          <Button icon={<IcRoundPlus />} label={'Submit Idea'} />
+          <Button icon={<IcRoundPlus />} label={"Submit Idea"} />
         </div>
         <div>
           <p className="text-gray-600 mt-3 text-sm md:text-base">

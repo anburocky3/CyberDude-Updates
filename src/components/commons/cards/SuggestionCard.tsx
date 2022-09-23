@@ -1,8 +1,8 @@
-import IcOutlineArrowDropUp from '@components/icons/IcOutlineArrowDropUp';
-import IcOutlineModeComment from '@components/icons/IcOutlineModeComment';
-import { dateFormat, stageClasses } from '@helpers/Global';
-import { Link } from 'react-router-dom';
-import { Suggestions } from 'types/Global';
+import IcOutlineArrowDropUp from "@components/icons/IcOutlineArrowDropUp";
+import IcOutlineModeComment from "@components/icons/IcOutlineModeComment";
+import { dateFormat, stageClasses } from "@helpers/Global";
+import { Link } from "react-router-dom";
+import { Suggestions } from "types/Global";
 
 const suggestionCard = ({
   votes,
@@ -32,7 +32,7 @@ const suggestionCard = ({
               <span>{dateFormat(createdAt)}</span>
               <span className="space-x-2">
                 {hashtags.map((hashtag) => (
-                  <span key={'#' + hashtag} className="hover:text-orange-600">
+                  <span key={"#" + hashtag} className="hover:text-orange-600">
                     #{hashtag}
                   </span>
                 ))}
