@@ -23,8 +23,12 @@ yarn
 yarn dev
 ```
 
-- If you care, do contribute! We love contributions.
-
 ## Author:
 
 [Anbuselvan Rocky](https://fb.me/anburocky3)
+
+## Learn how to contribute to this project?
+- [Contribution Guide](./.github/CONTRIBUTING.md)
+- [Contributors 💖](./CONTRIBUTORS.md)
+> If you care, do contribute! We love contributions.
+
