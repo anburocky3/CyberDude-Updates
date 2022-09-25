@@ -12,7 +12,7 @@
   "dependencies": {
     "@ant-design/icons": "4.7.0",
     "@tailwindcss/line-clamp": "0.4.2",
-    "antd": "4.23.1",
+    "antd": "4.23.2",
     "dayjs": "1.11.5",
     "dotenv": "16.0.2",
     "firebase": "9.9.4",
