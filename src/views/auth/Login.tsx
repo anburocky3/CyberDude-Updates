@@ -1,9 +1,10 @@
 import Button from "@components/commons/buttons/Button";
+import InputGroup from "@components/commons/forms/InputGroup";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { InputEvent, LoginCredentials } from "types/Global";
-import Image from "../assets/img/login-banner.svg";
-import { loginWithEmail } from "../firebase/functions";
+import Image from "../../assets/img/login-banner.svg";
+import { loginWithEmail } from "../../firebase/functions";
 
 type props = {
   setIsAuthenticated: CallableFunction;
@@ -20,6 +21,7 @@ export default function Login({
     user: "",
     pass: "",
   });
+
   const navigate = useNavigate();
   function handleChange(e: InputEvent): void {
     setData({
@@ -31,7 +33,6 @@ export default function Login({
   function handleSubmit(e: { preventDefault: CallableFunction }) {
     e.preventDefault();
     loginWithEmail(data).then((e) => {
-      console.log(e);
       setIsAuthenticated(true);
       navigate("/sessions");
     });
@@ -44,71 +45,59 @@ export default function Login({
     <div className=" ">
       {!loading ? (
         <div className="min-h-[calc(100vh-82px)] -my-[41px] p-5 flex container mx-auto">
-          <div className="m-auto h-full w-full 2xl:w-3/4 2xl:h-hull bg-white shadow-lg">
+          <div className="m-auto h-full w-full 2xl:w-3/4 2xl:h-hull bg-white rounded overflow-hidden shadow-lg">
             <div className="md:grid grid-cols-2 h-full">
-              <div className="orange-gradient md:flex h-full w-full hidden">
+              <div className="bg-gradient-to-b from-red-500 to-orange-500 md:flex h-full w-full hidden">
                 <img src={Image} className="h-1/2 m-auto" alt="Login Banner" />
               </div>
               <div className="xl:p-10 md:p-5 px-5 py-10">
-                <p className="text-primary font-bold text-2xl xl:text-3xl 2xl:text-4xl">
-                  CYBERDUDE
-                </p>
-                <p className="mt-16 font-bold xl:text-3xl 2xl:text-4xl text-xl">
+                <p className="font-bold xl:text-3xl 2xl:text-4xl text-xl">
                   Who is this?
                 </p>
                 <p className="text-gray-500 text-md mt-2 2xl:mt-4">
-                  Didn't know before?{" "}
-                  <span className="text-blue-800 cursor-not-allowed">
+                  Didn't know before?
+                  <span className="ml-1 text-blue-800 cursor-not-allowed">
                     Sign up
                   </span>
                 </p>
                 <form
                   action=""
-                  className="mt-16 spay-8"
+                  className="mt-8 spay-8 space-y-4"
                   onSubmit={(e) => handleSubmit(e)}
                 >
-                  <label className="jump-label">
-                    <input
-                      value={data.user}
-                      onChange={(e) => handleChange(e as InputEvent)}
-                      name="user"
-                      className={`jump-input mb-16 border-b w-full ${
-                        data.user !== "" ? "has-value" : ""
-                      }`}
-                      type="text"
-                      required
-                    />
-                    <span className="jump-span">What's your username</span>
-                  </label>
-                  <label className="jump-label">
-                    <input
-                      value={data.pass}
-                      onChange={(e) => handleChange(e as InputEvent)}
-                      name="pass"
-                      className={`jump-input border-b w-full ${
-                        data.pass !== "" ? "has-value" : ""
-                      }`}
-                      type="text"
-                      required
-                    />
-                    <span className="jump-span">Enter your password</span>
-                  </label>
+                  <InputGroup
+                    id={"email"}
+                    name="user"
+                    type="email"
+                    label="Email Address"
+                    value={data.user}
+                    placeholder="Email Address"
+                    onChange={(e) => handleChange(e as InputEvent)}
+                    required
+                  />
+
+                  <InputGroup
+                    id={"password"}
+                    name="pass"
+                    type="password"
+                    label="Password"
+                    value={data.pass}
+                    placeholder="Password"
+                    onChange={(e) => handleChange(e as InputEvent)}
+                    required
+                  />
                   <div className="grid grid-cols-3 mt-20">
                     <div className="col-span-2 mt-auto">
                       <p className="text-gray-500 text-xs md:text-sm 2xl:mt-4">
-                        Forgot password?{" "}
-                        <span className="text-blue-800 cursor-not-allowed inline md:block lg:inline">
+                        Forgot password
+                        <span className="ml-2 text-blue-800 cursor-not-allowed inline md:block lg:inline">
                           Reset password
                         </span>
                       </p>
                     </div>
                     <div className="flex">
                       <div className="ml-auto">
-                        <input
-                          type="submit"
-                          value="Login"
-                          className="orange-gradient px-4 text-white cursor-pointer py-2 rounded  font-medium flex items-center text-center"
-                        />
+                        <Button label="Login" />
                       </div>
                     </div>
                   </div>

@@ -3,13 +3,13 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import RoadmapPage from "@views/Roadmap";
 import SuggestionPage from "@views/Suggestions";
-import Login from "@views/Login";
+import Login from "@views/auth/Login";
 import ProtectedRoute from "./route/ProtectedRoute";
 import Sessions from "@views/Sessions";
 import { getDataById } from "./firebase/functions";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase/firebase";
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import Session from "@views/Session";
 
 function App() {

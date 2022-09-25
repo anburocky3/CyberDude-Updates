@@ -5,7 +5,7 @@ import ClarityMapOutlineAlerted from "../icons/ClarityMapOutlineAlerted";
 import Button from "./buttons/Button";
 import Input from "./forms/Input";
 import MenuLink from "./menus/MenuLink";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { AuthCheck } from "types/Global";
 import { Avatar, Image } from "antd";
 import { Logout } from "../../firebase/functions";
@@ -41,7 +41,10 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
     <header className="bg-white sticky top-0 z-50 shadow">
       <div className="container mx-auto flex justify-between items-center p-5">
         <div className="flex justify-between lg:justify-start items-center space-x-5 w-full lg:w-auto">
-          <Link to="/" className="text-xl font-bold text-primary mr-3">
+          <Link
+            to="/"
+            className="text-xl font-bold text-primary mr-3 hover:text-orange-600"
+          >
             CYBERDUDE
           </Link>
           <button
@@ -80,9 +83,17 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
         <div className="hidden lg:flex flex-col lg:flex-row items-center space-x-4 space-y-3 lg:space-y-0 mt-4 lg:mt-0">
           <div>
             <Input
+              id="search"
               type="search"
               placeholder="Search Ideas..."
               icon={<TablerSearch />}
+              name="search"
+              value=""
+              onChange={function (event: ChangeEvent<HTMLInputElement>): void {
+                throw new Error("Function not implemented.");
+              }}
+              required={false}
+              error={""}
             />
           </div>
           {!loading ? (

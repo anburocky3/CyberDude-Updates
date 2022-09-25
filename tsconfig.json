@@ -20,7 +20,8 @@
       "@views/*": ["./src/views/*"],
       "types/*": ["./src/types/*"],
       "@helpers/*": ["./src/helpers/*"]
-    }
+    },
+    "types": ["unplugin-icons/types/react"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

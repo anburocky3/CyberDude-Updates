@@ -13,7 +13,8 @@ const Button = ({
   const generic =
     sizeData + " rounded  font-medium flex items-center text-center";
   const primary =
-    generic + " shadow orange-gradient text-white hover:bg-orange-600";
+    generic +
+    " shadow bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600";
   const secondary = generic + " bg-white text-black border hover:bg-gray-50";
 
   let theme = "";

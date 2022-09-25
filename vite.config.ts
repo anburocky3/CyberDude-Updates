@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA, VitePWAOptions } from "vite-plugin-pwa";
+import Icons from "unplugin-icons/vite";
+import AutoImport from "unplugin-auto-import/vite";
 import path from "path";
 
 const pwaOptions: Partial<VitePWAOptions> = {
@@ -33,7 +35,19 @@ const pwaOptions: Partial<VitePWAOptions> = {
 };
 
 export default defineConfig({
-  plugins: [react(), VitePWA(pwaOptions)],
+  plugins: [
+    react(),
+    VitePWA(pwaOptions),
+    AutoImport({
+      /* options */
+      dts: "./src/types/auto-imports.d.ts", // or a custom path
+    }),
+    Icons({
+      /* options */
+      compiler: "jsx", // or 'solid'
+      autoInstall: true,
+    }),
+  ],
   resolve: {
     alias: {
       "@components": path.resolve(__dirname, "./src/components"),
