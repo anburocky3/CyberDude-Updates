@@ -6,7 +6,7 @@ import Button from "./buttons/Button";
 import Input from "./forms/Input";
 import MenuLink from "./menus/MenuLink";
 import { ChangeEvent, useState } from "react";
-import { AuthCheck } from "types/Global";
+import { AuthCheck, ButtonSizes } from "types/Global";
 import { Avatar, Image } from "antd";
 import { Logout } from "../../firebase/functions";
 import { useNavigate } from "react-router-dom";
@@ -16,13 +16,22 @@ type props = {
   loading: Boolean;
   setIsAuthenticated: CallableFunction;
 };
+
 function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
   const [menuOpened, setMenuOpened] = useState<boolean>(false);
+  const [avatarMenu, setAvatarMenu] = useState<boolean>(false);
+  const [btn, setBtn] = useState<string>("sample");
+
   const navigate = useNavigate();
 
   const triggerMenu = () => {
     setMenuOpened(!menuOpened);
   };
+
+  const toggleAvatarMenu = () => {
+    setAvatarMenu(!avatarMenu);
+  };
+
   function HandleLogout() {
     Logout()
       .then((e) => {
@@ -34,9 +43,11 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
         alert(e);
       });
   }
+
   const closeMenu = () => {
     setMenuOpened(false);
   };
+
   return (
     <header className="bg-white sticky top-0 z-50 shadow">
       <div className="container mx-auto flex justify-between items-center p-5">
@@ -107,14 +118,39 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
                 <Button label={"Sign Up"} className="cursor-not-allowed" />
               </div>
             ) : (
-              <div className=" flex items-center ">
-                <Button label={"Sign Out"} onClick={() => HandleLogout()} />
-                <p className="my-auto text-lg mx-4">{"Hello Cyberdude,"}</p>
-                <Avatar
+              <div className="flex items-center relative">
+                <div
+                  className="flex items-center cursor-pointer"
+                  onClick={() => {
+                    toggleAvatarMenu();
+                  }}
+                >
+                  <span className="mx-4">{"Hello Cyberdude"}</span>
+                  <img
+                    src="https://joeschmoe.io/api/v1/random"
+                    className="w-10 h-10 rounded-full"
+                  />
+                </div>
+                {/* <Avatar
                   className="cursor-pointer"
                   src="https://joeschmoe.io/api/v1/random"
                   size={50}
-                />
+                /> */}
+                {avatarMenu && (
+                  <div className="absolute left-0 top-10 right-0 max-w-md w-full bg-white rounded p-3">
+                    <ul>
+                      <li>
+                        <Button
+                          className="mx-3"
+                          variant="secondary"
+                          label={"Sign Out"}
+                          size={ButtonSizes.sm}
+                          onClick={() => HandleLogout()}
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </div>
             )
           ) : (
