@@ -9,7 +9,9 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "matchDepTypes": ["devDependencies"],
-      "automerge": true
+      "addLabels": ["dependencies", "renovate"],
+      "automerge": true,
+      "platformAutomerge": true
     }
   ],
   "platformAutomerge": true,
