@@ -39,6 +39,13 @@ export default defineConfig({
     react(),
     VitePWA(pwaOptions),
     AutoImport({
+      imports: [
+        // presets
+        "react",
+        {
+          "react-router-dom": ["Link"],
+        },
+      ],
       /* options */
       dts: "./src/types/auto-imports.d.ts", // or a custom path
     }),

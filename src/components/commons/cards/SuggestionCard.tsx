@@ -1,7 +1,6 @@
 import IcOutlineArrowDropUp from "@components/icons/IcOutlineArrowDropUp";
 import IcOutlineModeComment from "@components/icons/IcOutlineModeComment";
 import { dateFormat, stageClasses } from "@helpers/Global";
-import { Link } from "react-router-dom";
 import { Suggestions } from "types/Global";
 
 const suggestionCard = ({

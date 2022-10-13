@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 type props = {
   to: string;
   icon: JSX.Element;
