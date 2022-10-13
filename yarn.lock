@@ -9993,10 +9993,10 @@ vite-plugin-pwa@0.13.1:
     workbox-build "^6.5.4"
     workbox-window "^6.5.4"
 
-vite@3.1.7:
-  version "3.1.7"
-  resolved "https://registry.npmjs.org/vite/-/vite-3.1.7.tgz"
-  integrity sha512-5vCAmU4S8lyVdFCInu9M54f/g8qbOMakVw5xJ4pjoaDy5wgy9sLLZkGdSLN52dlsBqh0tBqxjaqqa8LgPqwRAA==
+vite@3.1.8:
+  version "3.1.8"
+  resolved "https://registry.npmjs.org/vite/-/vite-3.1.8.tgz"
+  integrity sha512-m7jJe3nufUbuOfotkntGFupinL/fmuTNuQmiVE7cH2IZMuf4UbfbGYMUT3jVWgGYuRVLY9j8NnrRqgw5rr5QTg==
   dependencies:
     esbuild "^0.15.9"
     postcss "^8.4.16"
