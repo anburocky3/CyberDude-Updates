@@ -7,11 +7,11 @@ export default function Sessions() {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <h2 className="text-xl my-8 font-bold">All Course Syllabus</h2>
         <Button className="my-8" label="Create" />
       </div>
-      <div className="flex justify-between gap-10 flex-wrap">
+      <div className="grid grid-cols-3 gap-10 ">
         {courses.map((e, i) => {
           return (
             <div key={e.title + i} onClick={() => navigate(`${e.title}`)}>
@@ -19,8 +19,8 @@ export default function Sessions() {
                 tags={e.tags}
                 title={e.title}
                 desc={e.desc}
-                last_update={e.last_update} 
-                sessions={[]}              
+                last_update={e.last_update}
+                sessions={[]}
               />
             </div>
           );

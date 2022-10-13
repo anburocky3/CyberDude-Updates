@@ -16,5 +16,6 @@
   ],
   "platformAutomerge": true,
   "commitBody": "[skip ci]",
+  "schedule": ["every weekend"],
   "ignoreTests": true
 }

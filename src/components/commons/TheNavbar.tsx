@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import AcademiconsIdeasRepec from "@components/icons/AcademiconsIdeasRepec";
 import TablerSearch from "@components/icons/TablerSearch";
-import ClarityMapOutlineAlerted from "../icons/ClarityMapOutlineAlerted";
 import Button from "./buttons/Button";
 import Input from "./forms/Input";
 import MenuLink from "./menus/MenuLink";
@@ -10,6 +8,9 @@ import { AuthCheck, ButtonSizes } from "types/Global";
 import { Avatar, Image } from "antd";
 import { Logout } from "../../firebase/functions";
 import { useNavigate } from "react-router-dom";
+import MaterialSymbolsPottedPlantOutlineSharp from "~icons/material-symbols/potted-plant-outline-sharp";
+import MdiLightbulbOn10 from "~icons/mdi/lightbulb-on-10";
+import ClarityMapOutlineAlerted from "~icons/clarity/map-outline-alerted";
 
 type props = {
   isAuthenticated: Boolean;
@@ -81,14 +82,23 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
           <div className="hidden lg:flex items-center space-x-5">
             <MenuLink
               to="/roadmap"
-              icon={<ClarityMapOutlineAlerted className="mr-2" />}
+              icon={<ClarityMapOutlineAlerted className=" mr-2" />}
               label="Roadmap"
             />
             <MenuLink
               to="/suggestions"
-              icon={<AcademiconsIdeasRepec className="mr-2" />}
+              icon={<MdiLightbulbOn10 className="mr-2" />}
               label="Ideas"
             />
+            {isAuthenticated && (
+              <MenuLink
+                to="/sessions"
+                icon={
+                  <MaterialSymbolsPottedPlantOutlineSharp className="mr-2" />
+                }
+                label="Sessions"
+              />
+            )}
           </div>
         </div>
         <div className="hidden lg:flex flex-col lg:flex-row items-center space-x-4 space-y-3 lg:space-y-0 mt-4 lg:mt-0">
@@ -173,7 +183,7 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
             <li onClick={closeMenu}>
               <MenuLink
                 to="/suggestions"
-                icon={<AcademiconsIdeasRepec className="mr-2" />}
+                icon={<MdiLightbulbOn10 className="mr-2" />}
                 label="Ideas"
                 className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700s lg:p-0 lg:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               />
