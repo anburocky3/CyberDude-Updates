@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import { VitePWA, VitePWAOptions } from "vite-plugin-pwa";
 import Icons from "unplugin-icons/vite";
@@ -62,6 +62,9 @@ export default defineConfig({
       types: path.resolve(__dirname, "./src/types"),
       "@helpers": path.resolve(__dirname, "./src/helpers"),
     },
+  },
+  test: {
+    environment: "jsdom",
   },
   server: {
     host: true,

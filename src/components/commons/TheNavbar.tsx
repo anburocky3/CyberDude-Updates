@@ -101,22 +101,20 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
             )}
           </div>
         </div>
-        <div className="hidden lg:flex flex-col lg:flex-row items-center space-x-4 space-y-3 lg:space-y-0 mt-4 lg:mt-0">
-          <div>
-            <Input
-              id="search"
-              type="search"
-              placeholder="Search Ideas..."
-              icon={<TablerSearch />}
-              name="search"
-              value=""
-              onChange={function (event: ChangeEvent<HTMLInputElement>): void {
-                throw new Error("Function not implemented.");
-              }}
-              required={false}
-              error={""}
-            />
-          </div>
+        <div className="hidden lg:flex flex-col lg:flex-row items-center justify-center space-x-4 space-y-3 lg:space-y-0 mt-4 lg:mt-0 bg-red-50">
+          <Input
+            id="search"
+            type="search"
+            placeholder="Search Ideas..."
+            icon={<TablerSearch />}
+            name="search"
+            value=""
+            onChange={function (event: ChangeEvent<HTMLInputElement>): void {
+              throw new Error("Function not implemented.");
+            }}
+            required={false}
+            error={""}
+          />
           {!loading ? (
             !isAuthenticated ? (
               <div className="space-x-4 flex items-center">
