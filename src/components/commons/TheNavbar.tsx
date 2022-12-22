@@ -153,7 +153,7 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
                   size={50}
                 /> */}
                 {avatarMenu && (
-                  <div className="absolute left-0 top-10 right-0 max-w-md w-full bg-white shadow rounded font-medium">
+                  <div className="absolute left-0 top-10 right-0 max-w-md w-full bg-white shadow rounded ">
                     <ul className="my-5 text-gray-600">
                       <li className="px-4 py-2 hover:bg-gray-100">
                         <Link to="/edit-profile">Edit Profile</Link>

@@ -6,18 +6,21 @@ import { useNavigate } from "react-router-dom";
 export default function Sessions() {
   const navigate = useNavigate();
   return (
-    <div>
-      <div className="flex justify-between items-center">
-        <h2 className="text-xl my-8 font-bold">All Course Syllabus</h2>
-        <Button className="my-8" label="Create" />
+    <div className="container mx-auto p-5 py-10">
+      <div className="flex justify-between items-center mb-10">
+        <h2 className="text-xl font-bold">All Course Syllabus</h2>
+        <Button className="" label="Create" />
       </div>
-      <div className="grid grid-cols-3 gap-10 ">
+      <div className="grid grid-cols-4 gap-10 ">
         {courses.map((e, i) => {
           return (
             <div key={e.title + i} onClick={() => navigate(`${e.title}`)}>
               <CourseCard
                 tags={e.tags}
                 title={e.title}
+                language={e.language}
+                technology={e.technology}
+                colorCode={e.colorCode}
                 desc={e.desc}
                 last_update={e.last_update}
                 sessions={[]}

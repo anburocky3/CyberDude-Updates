@@ -61,6 +61,9 @@ export type Course = {
   desc: string;
   className?: string;
   tags: string[];
+  language: string;
+  technology: string;
+  colorCode: string;
   sessions: SessionType[];
 };
 export type SessionType = {

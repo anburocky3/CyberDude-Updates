@@ -121,13 +121,7 @@ export default function Session() {
 
   return (
     <div>
-      <Modal
-        open={isModalOpen}
-        width={500}
-        footer={[]}
-        onCancel={handleCancel}
-        className="rounded"
-      >
+      <Modal open={isModalOpen} width={500} footer={[]} onCancel={handleCancel}>
         <div className="">
           <p className="text-center mb-10 text-xl">Add new session</p>
           <p>New Session</p>
@@ -136,7 +130,7 @@ export default function Session() {
             value={newSession}
             onChange={(e) => setNewSession(e.target.value)}
             placeholder="Enter New Session"
-            className="focus:outline-none focus:ring-1 focus:ring-orange-500 border p-2 rounded-lg w-full mb-8 mt-1"
+            className="focus:outline-none focus:ring-1 focus:ring-orange-500 border-orange-500 p-2 border-2 rounded-lg w-full mb-8 mt-1"
             id=""
           ></input>
           <div className="flex -mb-5 justify-between">
@@ -149,59 +143,37 @@ export default function Session() {
           </div>
         </div>
       </Modal>
-      <div
-        className="h-48 mb-10 flex items-center"
-        style={{ backgroundColor: course.colorCode }}
-      >
-        <div className="container mx-auto flex justify-between items-center ">
-          <div className="flex space-x-4">
-            <img
-              src={`https://ui-avatars.com/api/?name=${course.technology}&background=0D8ABC&color=fff`}
-              alt=""
-              className="rounded-full"
-            />
-            <div className="text-white space-y-2">
-              <h3 className="text-lg font-semibold text-white">
-                {course.title}
-              </h3>
-              <p>{course.desc}</p>
-            </div>
-          </div>
-          <div>
-            <Button label={"Add Section"} onClick={() => showModal()} />
-          </div>
+      <div className="flex justify-between">
+        <Breadcrumb separator=">" className="my-8">
+          <Item
+            className="cursor-pointer"
+            onClick={() => navigate("/sessions")}
+          >
+            Sessions
+          </Item>
+          <Item>{id}</Item>
+        </Breadcrumb>
+        <div className="flex">
+          <Button
+            className="my-8"
+            onClick={() => showModal()}
+            label="Add Section"
+          />
         </div>
       </div>
-      <div className="container mx-auto lg:flex gap-5 space-y-8 lg:space-y-0">
-        <div className="lg:w-[25rem] bg-white rounded p-5 shadow">
-          <div>
-            <h3 className="font-semibold text-base">Table of contents</h3>
-            <p className="text-gray-600 mt-1 text-sm">
-              Last updated on 06th Oct, 2022
-            </p>
-          </div>
-          <div className="my-5">
-            <ul>
-              {[...Array(10)].map((x, i) => {
-                return (
-                  <li className="bg-gray-100 px-2 py-1 flex justify-between items-center mb-3">
-                    <div>{i + 1}. Introduction</div>
-                    <div className="text-xs">2 lessons | 24 mins</div>
-                  </li>
-                );
-              })}
-              <li className="px-2 py-1">
-                <div>
-                  <span className="font-bold italic float-right ">
-                    Total
-                    <span className="font-normal text-xs not-italic ml-5">
-                      40 topics | 4.6hrs
-                    </span>
-                  </span>
-                </div>
-              </li>
-            </ul>
-          </div>
+      <div className="lg:flex gap-5 space-y-8 lg:space-y-0">
+        <div className="lg:w-[25rem]">
+          <CourseCard
+            className="lg:ml-0"
+            tags={course.tags}
+            title={course.title}
+            language={course.language}
+            technology={course.technology}
+            colorCode={course.colorCode}
+            desc={course.desc}
+            last_update={course.last_update}
+            sessions={[]}
+          />
         </div>
         <div className="w-full space-y-5">
           <DragAndDrop onDragEnd={handleDragEnd as any}>

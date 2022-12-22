@@ -50,7 +50,7 @@ function App() {
         setIsAuthenticated={setIsAuthenticated}
       />
 
-      <main className="container mx-auto py-5 sm:py-10">
+      <main className="">
         <Routes>
           <Route path="/" element={<Navigate to="/roadmap" replace />} />
           <Route path="/roadmap" element={<RoadmapPage />} />

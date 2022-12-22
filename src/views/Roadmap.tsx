@@ -20,7 +20,7 @@ function RoadmapPage() {
       ));
   };
   return (
-    <div className="p-3 sm:p-0">
+    <div className="container mx-auto py-5">
       <div className="text-xl font-bold">Roadmap</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5  mt-5">
         <RoadmapCard
