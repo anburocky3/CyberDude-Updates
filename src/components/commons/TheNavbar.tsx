@@ -3,7 +3,7 @@ import TablerSearch from "@components/icons/TablerSearch";
 import Button from "./buttons/Button";
 import Input from "./forms/Input";
 import MenuLink from "./menus/MenuLink";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, MutableRefObject, useState } from "react";
 import { AuthCheck, ButtonSizes } from "types/Global";
 import { Avatar, Image } from "antd";
 import { Logout } from "../../firebase/functions";
@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import MaterialSymbolsPottedPlantOutlineSharp from "~icons/material-symbols/potted-plant-outline-sharp";
 import MdiLightbulbOn10 from "~icons/mdi/lightbulb-on-10";
 import ClarityMapOutlineAlerted from "~icons/clarity/map-outline-alerted";
+import useOuterClick from "../../hooks/useOuterClick";
 
 type props = {
   isAuthenticated: Boolean;
@@ -22,6 +23,11 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
   const [menuOpened, setMenuOpened] = useState<boolean>(false);
   const [avatarMenu, setAvatarMenu] = useState<boolean>(false);
   const [btn, setBtn] = useState<string>("sample");
+
+  const wrapperRef = useRef(null);
+  useOuterClick(wrapperRef, () => {
+    setAvatarMenu(false);
+  });
 
   const navigate = useNavigate();
 
@@ -101,7 +107,7 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
             )}
           </div>
         </div>
-        <div className="hidden lg:flex flex-col lg:flex-row items-center justify-center space-x-4 space-y-3 lg:space-y-0 mt-4 lg:mt-0 bg-red-50">
+        <div className="hidden lg:flex flex-col lg:flex-row items-center justify-center space-x-4 space-y-3 lg:space-y-0 mt-4 lg:mt-0 ">
           <Input
             id="search"
             type="search"
@@ -126,16 +132,18 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
                 <Button label={"Sign Up"} className="cursor-not-allowed" />
               </div>
             ) : (
-              <div className="flex items-center relative">
+              <div className="flex items-center relative" ref={wrapperRef}>
                 <div
                   className="flex items-center cursor-pointer"
                   onClick={() => {
                     toggleAvatarMenu();
                   }}
                 >
-                  <span className="mx-4">{"Hello Cyberdude"}</span>
+                  <span className="mx-4 text-gray-500 font-medium">
+                    {"CyberDude"}
+                  </span>
                   <img
-                    src="https://joeschmoe.io/api/v1/random"
+                    src="https://ui-avatars.com/api/?name=Elon+Musk&background=0D8ABC&color=fff"
                     className="w-10 h-10 rounded-full"
                   />
                 </div>
@@ -145,16 +153,13 @@ function TheNavbar({ isAuthenticated, loading, setIsAuthenticated }: props) {
                   size={50}
                 /> */}
                 {avatarMenu && (
-                  <div className="absolute left-0 top-10 right-0 max-w-md w-full bg-white rounded p-3">
-                    <ul>
-                      <li>
-                        <Button
-                          className="mx-3"
-                          variant="secondary"
-                          label={"Sign Out"}
-                          size={ButtonSizes.sm}
-                          onClick={() => HandleLogout()}
-                        />
+                  <div className="absolute left-0 top-10 right-0 max-w-md w-full bg-white shadow rounded font-medium">
+                    <ul className="my-5 text-gray-600">
+                      <li className="px-4 py-2 hover:bg-gray-100">
+                        <Link to="/edit-profile">Edit Profile</Link>
+                      </li>
+                      <li className="px-4 py-2 hover:bg-gray-100 ">
+                        <button onClick={() => HandleLogout()}>Sign Out</button>
                       </li>
                     </ul>
                   </div>
