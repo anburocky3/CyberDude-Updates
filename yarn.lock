@@ -6531,7 +6531,7 @@ __metadata:
     react-scripts: 5.0.1
     tailwindcss: 3.2.4
     typescript: 4.9.4
-    unplugin-auto-import: ^0.12.1
+    unplugin-auto-import: ^0.13.0
     unplugin-icons: ^0.15.1
     uuidv4: 6.2.13
     vite: 4.0.4
@@ -15111,9 +15111,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unimport@npm:^1.0.2":
-  version: 1.3.0
-  resolution: "unimport@npm:1.3.0"
+"unimport@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "unimport@npm:2.1.0"
   dependencies:
     "@rollup/pluginutils": ^5.0.2
     escape-string-regexp: ^5.0.0
@@ -15121,12 +15121,12 @@ __metadata:
     local-pkg: ^0.4.3
     magic-string: ^0.27.0
     mlly: ^1.1.0
-    pathe: ^1.0.0
+    pathe: ^1.1.0
     pkg-types: ^1.0.1
     scule: ^1.0.0
     strip-literal: ^1.0.0
     unplugin: ^1.0.1
-  checksum: 6a2070ea8800ef69e9c61a0342e8e1b2a674007e936d7b147afd1466bdb5b642e736084f4867f6ea341c9d9c8451a6e5b238bcb6fa4480d4ce5f8461fb5aa3c2
+  checksum: cdc554dd2c0949d3be4e9e545d26b2da32f2c4c217eadc9b638042e3af5c6dfcb3e918e12a6eeff86fc9280a185fba7540c4b6b80803ac43d24f5e89d07be831
   languageName: node
   linkType: hard
 
@@ -15178,22 +15178,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unplugin-auto-import@npm:^0.12.1":
-  version: 0.12.1
-  resolution: "unplugin-auto-import@npm:0.12.1"
+"unplugin-auto-import@npm:^0.13.0":
+  version: 0.13.0
+  resolution: "unplugin-auto-import@npm:0.13.0"
   dependencies:
     "@antfu/utils": ^0.7.2
     "@rollup/pluginutils": ^5.0.2
-    local-pkg: ^0.4.2
+    local-pkg: ^0.4.3
     magic-string: ^0.27.0
-    unimport: ^1.0.2
+    unimport: ^2.1.0
     unplugin: ^1.0.1
   peerDependencies:
     "@vueuse/core": "*"
   peerDependenciesMeta:
     "@vueuse/core":
       optional: true
-  checksum: 323aa8402af543e63c3e3b6f57b9251e49b2a0fe1636f43eab605d2f286473d0d4b3e2d63f730ca91d03b1fe82a790e965e96add6304594d11f43f7bfac3b5ee
+  checksum: 5686fc68095e80c2bda650e28a2050632755d18573e9fbf351da9715cd7872fdc8593ad97820c49c5246e467c4c889f37ad32ab52b146cdb10a62d312ee20c68
   languageName: node
   linkType: hard
 
