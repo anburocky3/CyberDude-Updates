@@ -6542,7 +6542,7 @@ __metadata:
     unplugin-icons: ^0.15.1
     uuidv4: 6.2.13
     vite: 4.1.1
-    vite-plugin-pwa: 0.14.1
+    vite-plugin-pwa: 0.14.4
     vitest: ^0.28.0
   languageName: unknown
   linkType: soft
@@ -15439,9 +15439,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:0.14.1":
-  version: 0.14.1
-  resolution: "vite-plugin-pwa@npm:0.14.1"
+"vite-plugin-pwa@npm:0.14.4":
+  version: 0.14.4
+  resolution: "vite-plugin-pwa@npm:0.14.4"
   dependencies:
     "@rollup/plugin-replace": ^5.0.1
     debug: ^4.3.4
@@ -15454,7 +15454,7 @@ __metadata:
     vite: ^3.1.0 || ^4.0.0
     workbox-build: ^6.5.4
     workbox-window: ^6.5.4
-  checksum: 7915b273b4abaf5f87abea1a8a39167ccd8e565c66344b2eb7f8e678e358d2d119f67deb9cfdd76113ad3df4d1006e8122093fdfa95b026ddeab138c9d42aaa0
+  checksum: 498278d023788b59f6c6eb2b3f7c4fab7b9dd72e3c4f4b8df7c3c5c56a487ffe17e29832abd35c2700ab31a2525f04f028e44ceebe6b830ad346888e752ed7e6
   languageName: node
   linkType: hard
 
