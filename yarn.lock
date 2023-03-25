@@ -4382,12 +4382,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-beautiful-dnd@npm:13.1.3":
-  version: 13.1.3
-  resolution: "@types/react-beautiful-dnd@npm:13.1.3"
+"@types/react-beautiful-dnd@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@types/react-beautiful-dnd@npm:13.1.4"
   dependencies:
     "@types/react": "*"
-  checksum: e09860672c15666ee3d3acfad3dfc2ebd8fceb29b5468e12b7543af74d0e19f2eb9c4be187adb33c5d6816f47b0db958a8c0160b15826b92f6df1e8e3e34657a
+  checksum: 76220f1031721e73f712cf0021de6a3cf4049260ec29996cd587876ebd6ed01b9c31d8efb5cf230eb4d2b6259525ffe0f3054667732d30c79df37e49f9398c5e
   languageName: node
   linkType: hard
 
@@ -6824,7 +6824,7 @@ __metadata:
     "@testing-library/react": ^13.4.0
     "@types/node": 18.15.9
     "@types/react": 18.0.29
-    "@types/react-beautiful-dnd": 13.1.3
+    "@types/react-beautiful-dnd": 13.1.4
     "@types/react-dom": 18.0.11
     "@vitejs/plugin-react": 3.1.0
     antd: 5.1.6
