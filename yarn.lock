@@ -6826,7 +6826,7 @@ __metadata:
     unplugin-icons: ^0.15.1
     uuidv4: 6.2.13
     vite: 4.5.0
-    vite-plugin-pwa: 0.17.1
+    vite-plugin-pwa: 0.17.2
     vitest: ^0.34.0
   languageName: unknown
   linkType: soft
@@ -16221,9 +16221,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:0.17.1":
-  version: 0.17.1
-  resolution: "vite-plugin-pwa@npm:0.17.1"
+"vite-plugin-pwa@npm:0.17.2":
+  version: 0.17.2
+  resolution: "vite-plugin-pwa@npm:0.17.2"
   dependencies:
     debug: ^4.3.4
     fast-glob: ^3.3.2
@@ -16234,7 +16234,7 @@ __metadata:
     vite: ^3.1.0 || ^4.0.0 || ^5.0.0
     workbox-build: ^7.0.0
     workbox-window: ^7.0.0
-  checksum: 2047f31d8f14d951ce023a1a3153a4a00242ecf1ab880492898389b42c3286fc4262cc91573ff22847820e4f17cbcfb0319e8aefe528353db20e50d9f0749533
+  checksum: d9442e89070c1d27b62d521f50a17a29839f196a290799cfc4da53aaef66a39dfc568c46448aae0529d72b282f4770d607380dc30b7603885055ab91444ad2e5
   languageName: node
   linkType: hard
 
