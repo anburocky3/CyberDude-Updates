@@ -6818,7 +6818,7 @@ __metadata:
     unplugin-icons: ^0.15.1
     uuidv4: 6.2.13
     vite: 4.5.3
-    vite-plugin-pwa: 0.17.5
+    vite-plugin-pwa: 0.19.8
     vitest: ^0.34.0
   languageName: unknown
   linkType: soft
@@ -16229,9 +16229,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:0.17.5":
-  version: 0.17.5
-  resolution: "vite-plugin-pwa@npm:0.17.5"
+"vite-plugin-pwa@npm:0.19.8":
+  version: 0.19.8
+  resolution: "vite-plugin-pwa@npm:0.19.8"
   dependencies:
     debug: ^4.3.4
     fast-glob: ^3.3.2
@@ -16239,10 +16239,14 @@ __metadata:
     workbox-build: ^7.0.0
     workbox-window: ^7.0.0
   peerDependencies:
+    "@vite-pwa/assets-generator": ^0.2.4
     vite: ^3.1.0 || ^4.0.0 || ^5.0.0
     workbox-build: ^7.0.0
     workbox-window: ^7.0.0
-  checksum: 02205b45ee14d8766ddf7bd7407d0c1d1b22598c1efda0190774f1a008965429318fb7ed51685b3685bd8e2197f2b1ffb6fd3262fc9aac1992cb6c10d5b8a17c
+  peerDependenciesMeta:
+    "@vite-pwa/assets-generator":
+      optional: true
+  checksum: ab33ad6c77f61349f1a119347134ff54fe44c27e249deab524318b255e3f6b186340660fe256d6538a2872e2cb5eed00bd9f229ab9aa074bf5676e2107150c82
   languageName: node
   linkType: hard
 
