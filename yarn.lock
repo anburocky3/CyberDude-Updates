@@ -4308,12 +4308,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.19.10":
-  version: 18.19.10
-  resolution: "@types/node@npm:18.19.10"
+"@types/node@npm:18.19.31":
+  version: 18.19.31
+  resolution: "@types/node@npm:18.19.31"
   dependencies:
     undici-types: ~5.26.4
-  checksum: eea429c1fe8d25702c1e860f5c4ac053db3c52a5884646f458513b622a507660a6c88c717ee4f106e63c82f4ec6cafbf999e3f3f1d3083f7a40b4f715e03332b
+  checksum: 949bddfd7071bd47300d1f33d380ee34695ccd5f046f1a03e4d2be0d953ace896905144d44a6f483f241b5ef34b86f0e40a0e312201117782eecf89e81a4ff13
   languageName: node
   linkType: hard
 
@@ -6793,7 +6793,7 @@ __metadata:
     "@iconify-json/mdi": ^1.1.44
     "@tailwindcss/line-clamp": 0.4.2
     "@testing-library/react": ^13.4.0
-    "@types/node": 18.19.10
+    "@types/node": 18.19.31
     "@types/react": 18.2.48
     "@types/react-beautiful-dnd": 13.1.8
     "@types/react-dom": 18.2.18
