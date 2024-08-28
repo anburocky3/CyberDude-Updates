@@ -259,6 +259,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-annotate-as-pure@npm:^7.24.7":
+  version: 7.24.7
+  resolution: "@babel/helper-annotate-as-pure@npm:7.24.7"
+  dependencies:
+    "@babel/types": ^7.24.7
+  checksum: 6178566099a6a0657db7a7fa601a54fb4731ca0b8614fbdccfd8e523c210c13963649bc8fdfd53ce7dd14d05e3dda2fb22dea5b30113c488b9eb1a906d60212e
+  languageName: node
+  linkType: hard
+
 "@babel/helper-builder-binary-assignment-operator-visitor@npm:^7.18.6":
   version: 7.18.9
   resolution: "@babel/helper-builder-binary-assignment-operator-visitor@npm:7.18.9"
@@ -312,6 +321,23 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
   checksum: 1e9ed4243b75278fa24deb40dc62bf537b79307987223a2d2d2ae5abf7ba6dc8435d6e3bb55d52ceb30d3e1eba88e7eb6a1885a8bb519e5cfc3e9dedb97d43e6
+  languageName: node
+  linkType: hard
+
+"@babel/helper-create-class-features-plugin@npm:^7.21.0":
+  version: 7.25.4
+  resolution: "@babel/helper-create-class-features-plugin@npm:7.25.4"
+  dependencies:
+    "@babel/helper-annotate-as-pure": ^7.24.7
+    "@babel/helper-member-expression-to-functions": ^7.24.8
+    "@babel/helper-optimise-call-expression": ^7.24.7
+    "@babel/helper-replace-supers": ^7.25.0
+    "@babel/helper-skip-transparent-expression-wrappers": ^7.24.7
+    "@babel/traverse": ^7.25.4
+    semver: ^6.3.1
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: 4544ebda4516eb25efdebd47ca024bd7bdb1eb6e7cc3ad89688c8ef8e889734c2f4411ed78981899c641394f013f246f2af63d92a0e9270f6c453309b4cb89ba
   languageName: node
   linkType: hard
 
@@ -387,6 +413,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-member-expression-to-functions@npm:^7.24.8":
+  version: 7.24.8
+  resolution: "@babel/helper-member-expression-to-functions@npm:7.24.8"
+  dependencies:
+    "@babel/traverse": ^7.24.8
+    "@babel/types": ^7.24.8
+  checksum: bf923d05d81b06857f4ca4fe9c528c9c447a58db5ea39595bb559eae2fce01a8266173db0fd6a2ec129d7bbbb9bb22f4e90008252f7c66b422c76630a878a4bc
+  languageName: node
+  linkType: hard
+
 "@babel/helper-module-imports@npm:^7.10.4, @babel/helper-module-imports@npm:^7.18.6":
   version: 7.18.6
   resolution: "@babel/helper-module-imports@npm:7.18.6"
@@ -445,6 +481,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-optimise-call-expression@npm:^7.24.7":
+  version: 7.24.7
+  resolution: "@babel/helper-optimise-call-expression@npm:7.24.7"
+  dependencies:
+    "@babel/types": ^7.24.7
+  checksum: 280654eaf90e92bf383d7eed49019573fb35a98c9e992668f701ad099957246721044be2068cf6840cb2299e0ad393705a1981c88c23a1048096a8d59e5f79a3
+  languageName: node
+  linkType: hard
+
 "@babel/helper-plugin-utils@npm:^7.0.0, @babel/helper-plugin-utils@npm:^7.10.4, @babel/helper-plugin-utils@npm:^7.12.13, @babel/helper-plugin-utils@npm:^7.14.5, @babel/helper-plugin-utils@npm:^7.16.7, @babel/helper-plugin-utils@npm:^7.18.6, @babel/helper-plugin-utils@npm:^7.18.9, @babel/helper-plugin-utils@npm:^7.19.0, @babel/helper-plugin-utils@npm:^7.20.2, @babel/helper-plugin-utils@npm:^7.8.0, @babel/helper-plugin-utils@npm:^7.8.3":
   version: 7.20.2
   resolution: "@babel/helper-plugin-utils@npm:7.20.2"
@@ -480,6 +525,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-replace-supers@npm:^7.25.0":
+  version: 7.25.0
+  resolution: "@babel/helper-replace-supers@npm:7.25.0"
+  dependencies:
+    "@babel/helper-member-expression-to-functions": ^7.24.8
+    "@babel/helper-optimise-call-expression": ^7.24.7
+    "@babel/traverse": ^7.25.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: f669fc2487c22d40b808f94b9c3ee41129484d5ef0ba689bdd70f216ff91e10b6b021d2f8cd37e7bdd700235a2a6ae6622526344f064528190383bf661ac65f8
+  languageName: node
+  linkType: hard
+
 "@babel/helper-simple-access@npm:^7.20.2":
   version: 7.20.2
   resolution: "@babel/helper-simple-access@npm:7.20.2"
@@ -505,6 +563,16 @@ __metadata:
   dependencies:
     "@babel/types": ^7.20.0
   checksum: 34da8c832d1c8a546e45d5c1d59755459ffe43629436707079989599b91e8c19e50e73af7a4bd09c95402d389266731b0d9c5f69e372d8ebd3a709c05c80d7dd
+  languageName: node
+  linkType: hard
+
+"@babel/helper-skip-transparent-expression-wrappers@npm:^7.24.7":
+  version: 7.24.7
+  resolution: "@babel/helper-skip-transparent-expression-wrappers@npm:7.24.7"
+  dependencies:
+    "@babel/traverse": ^7.24.7
+    "@babel/types": ^7.24.7
+  checksum: 11b28fe534ce2b1a67c4d8e51a7b5711a2a0a0cae802f74614eee54cca58c744d9a62f6f60103c41759e81c537d270bfd665bf368a6bea214c6052f2094f8407
   languageName: node
   linkType: hard
 
@@ -837,7 +905,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-private-property-in-object@npm:^7.16.0, @babel/plugin-proposal-private-property-in-object@npm:^7.18.6":
+"@babel/plugin-proposal-private-property-in-object@npm:^7.16.7":
+  version: 7.21.11
+  resolution: "@babel/plugin-proposal-private-property-in-object@npm:7.21.11"
+  dependencies:
+    "@babel/helper-annotate-as-pure": ^7.18.6
+    "@babel/helper-create-class-features-plugin": ^7.21.0
+    "@babel/helper-plugin-utils": ^7.20.2
+    "@babel/plugin-syntax-private-property-in-object": ^7.14.5
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 1b880543bc5f525b360b53d97dd30807302bb82615cd42bf931968f59003cac75629563d6b104868db50abd22235b3271fdf679fea5db59a267181a99cc0c265
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-proposal-private-property-in-object@npm:^7.18.6":
   version: 7.20.5
   resolution: "@babel/plugin-proposal-private-property-in-object@npm:7.20.5"
   dependencies:
@@ -1774,7 +1856,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/traverse@npm:^7.24.7, @babel/traverse@npm:^7.25.2":
+"@babel/traverse@npm:^7.24.7, @babel/traverse@npm:^7.24.8, @babel/traverse@npm:^7.25.0, @babel/traverse@npm:^7.25.2, @babel/traverse@npm:^7.25.4":
   version: 7.25.4
   resolution: "@babel/traverse@npm:7.25.4"
   dependencies:
@@ -1800,7 +1882,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.24.7, @babel/types@npm:^7.25.0, @babel/types@npm:^7.25.2, @babel/types@npm:^7.25.4":
+"@babel/types@npm:^7.24.7, @babel/types@npm:^7.24.8, @babel/types@npm:^7.25.0, @babel/types@npm:^7.25.2, @babel/types@npm:^7.25.4":
   version: 7.25.4
   resolution: "@babel/types@npm:7.25.4"
   dependencies:
@@ -16321,11 +16403,11 @@ __metadata:
 
 "typescript@patch:typescript@4.9.5#~builtin<compat/typescript>":
   version: 4.9.5
-  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"
+  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 8f6260acc86b56bfdda6004bc53f32ea548f543e8baef7071c8e34d29d292f3e375c8416556c8de10b24deef6933cd1c16a8233dc84a3dd43a13a13265d0faab
+  checksum: 1f8f3b6aaea19f0f67cba79057674ba580438a7db55057eb89cc06950483c5d632115c14077f6663ea76fd09fce3c190e6414bb98582ec80aa5a4eaf345d5b68
   languageName: node
   linkType: hard
 
