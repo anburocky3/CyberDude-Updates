@@ -4090,7 +4090,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/pluginutils@npm:^5.0.1, @rollup/pluginutils@npm:^5.1.0":
+"@rollup/pluginutils@npm:^5.0.1":
   version: 5.1.0
   resolution: "@rollup/pluginutils@npm:5.1.0"
   dependencies:
@@ -4103,6 +4103,22 @@ __metadata:
     rollup:
       optional: true
   checksum: 3cc5a6d91452a6eabbfd1ae79b4dd1f1e809d2eecda6e175deb784e75b0911f47e9ecce73f8dd315d6a8b3f362582c91d3c0f66908b6ced69345b3cbe28f8ce8
+  languageName: node
+  linkType: hard
+
+"@rollup/pluginutils@npm:^5.1.3":
+  version: 5.1.4
+  resolution: "@rollup/pluginutils@npm:5.1.4"
+  dependencies:
+    "@types/estree": ^1.0.0
+    estree-walker: ^2.0.2
+    picomatch: ^4.0.2
+  peerDependencies:
+    rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+  peerDependenciesMeta:
+    rollup:
+      optional: true
+  checksum: dc0294580effbf68965ed7939c9e469b8c8847b59842e4691fd10d0a8d0b178600bd912694c409ae33600c9059efce72e96f25917cff983afd57f092a7aeb8d2
   languageName: node
   linkType: hard
 
@@ -5316,21 +5332,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.10.0":
-  version: 8.11.2
-  resolution: "acorn@npm:8.11.2"
+"acorn@npm:^8.14.0":
+  version: 8.14.0
+  resolution: "acorn@npm:8.14.0"
   bin:
     acorn: bin/acorn
-  checksum: 818450408684da89423e3daae24e4dc9b68692db8ab49ea4569c7c5abb7a3f23669438bf129cc81dfdada95e1c9b944ee1bfca2c57a05a4dc73834a612fbf6a7
-  languageName: node
-  linkType: hard
-
-"acorn@npm:^8.11.3, acorn@npm:^8.12.1":
-  version: 8.12.1
-  resolution: "acorn@npm:8.12.1"
-  bin:
-    acorn: bin/acorn
-  checksum: 677880034aee5bdf7434cc2d25b641d7bedb0b5ef47868a78dadabedccf58e1c5457526d9d8249cd253f2df087e081c3fe7d903b448d8e19e5131a3065b83c07
+  checksum: 8755074ba55fff94e84e81c72f1013c2d9c78e973c31231c8ae505a5f966859baf654bddd75046bffd73ce816b149298977fff5077a3033dedba0ae2aad152d4
   languageName: node
   linkType: hard
 
@@ -6702,10 +6709,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"confbox@npm:^0.1.7":
-  version: 0.1.7
-  resolution: "confbox@npm:0.1.7"
-  checksum: bde836c26f5154a348b0c0a757f8a0138929e5737e0553be3c4f07a056abca618b861aa63ac3b22d344789b56be99a1382928933e08cd500df00213bf4d8fb43
+"confbox@npm:^0.1.8":
+  version: 0.1.8
+  resolution: "confbox@npm:0.1.8"
+  checksum: 5c7718ab22cf9e35a31c21ef124156076ae8c9dc65e6463d54961caf5a1d529284485a0fdf83fd23b27329f3b75b0c8c07d2e36c699f5151a2efe903343f976a
   languageName: node
   linkType: hard
 
@@ -7198,7 +7205,7 @@ __metadata:
     react-scripts: 5.0.1
     tailwindcss: 3.4.17
     typescript: 4.9.5
-    unplugin-auto-import: ^0.18.0
+    unplugin-auto-import: ^0.19.0
     unplugin-icons: ^0.15.1
     uuidv4: 6.2.13
     vite: 4.5.5
@@ -10842,10 +10849,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-tokens@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "js-tokens@npm:9.0.0"
-  checksum: 427d0db681caab0c906cfc78a0235bbe7b41712cee83f3f14785c1de079a1b1a85693cc8f99a3f71685d0d76acaa5b9c8920850b67f93d3eeb7ef186987d186c
+"js-tokens@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "js-tokens@npm:9.0.1"
+  checksum: 8b604020b1a550e575404bfdde4d12c11a7991ffe0c58a2cf3515b9a512992dc7010af788f0d8b7485e403d462d9e3d3b96c4ff03201550fdbb09e17c811e054
   languageName: node
   linkType: hard
 
@@ -11201,13 +11208,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"local-pkg@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "local-pkg@npm:0.5.0"
+"local-pkg@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "local-pkg@npm:0.5.1"
   dependencies:
-    mlly: ^1.4.2
-    pkg-types: ^1.0.3
-  checksum: b0a6931e588ad4f7bf4ab49faacf49e07fc4d05030f895aa055d46727a15b99300d39491cf2c3e3f05284aec65565fb760debb74c32e64109f4a101f9300d81a
+    mlly: ^1.7.3
+    pkg-types: ^1.2.1
+  checksum: 478effb440780d412bff78ed80d1593d707a504931a7e5899d6570d207da1e661a6128c3087286ff964696a55c607c2bbd2bbe98377401c7d395891c160fa6e1
   languageName: node
   linkType: hard
 
@@ -11406,12 +11413,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"magic-string@npm:^0.30.10, magic-string@npm:^0.30.11":
-  version: 0.30.11
-  resolution: "magic-string@npm:0.30.11"
+"magic-string@npm:^0.30.14, magic-string@npm:^0.30.15":
+  version: 0.30.17
+  resolution: "magic-string@npm:0.30.17"
   dependencies:
     "@jridgewell/sourcemap-codec": ^1.5.0
-  checksum: e041649453c9a3f31d2e731fc10e38604d50e20d3585cd48bc7713a6e2e1a3ad3012105929ca15750d59d0a3f1904405e4b95a23b7e69dc256db3c277a73a3ca
+  checksum: f4b4ed17c5ada64f77fc98491847302ebad64894a905c417c943840c0384662118c9b37f9f68bb86add159fa4749ff6f118c4627d69a470121b46731f8debc6d
   languageName: node
   linkType: hard
 
@@ -11610,7 +11617,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^9.0.4, minimatch@npm:^9.0.5":
+"minimatch@npm:^9.0.4":
   version: 9.0.5
   resolution: "minimatch@npm:9.0.5"
   dependencies:
@@ -11780,27 +11787,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mlly@npm:^1.4.2":
-  version: 1.4.2
-  resolution: "mlly@npm:1.4.2"
+"mlly@npm:^1.7.3":
+  version: 1.7.3
+  resolution: "mlly@npm:1.7.3"
   dependencies:
-    acorn: ^8.10.0
-    pathe: ^1.1.1
-    pkg-types: ^1.0.3
-    ufo: ^1.3.0
-  checksum: ad0813eca133e59ac03b356b87deea57da96083dce7dda58a8eeb2dce92b7cc2315bedd9268f3ff8e98effe1867ddb1307486d4c5cd8be162daa8e0fa0a98ed4
-  languageName: node
-  linkType: hard
-
-"mlly@npm:^1.7.1":
-  version: 1.7.1
-  resolution: "mlly@npm:1.7.1"
-  dependencies:
-    acorn: ^8.11.3
+    acorn: ^8.14.0
     pathe: ^1.1.2
-    pkg-types: ^1.1.1
-    ufo: ^1.5.3
-  checksum: 956a6d54119eef782f302580f63a9800654e588cd70015b4218a00069c6ef11b87984e8ffe140a4668b0100ad4022b11d1f9b11ac2c6dbafa4d8bc33ae3a08a8
+    pkg-types: ^1.2.1
+    ufo: ^1.5.4
+  checksum: 60d309c7ce2ac162224a087fcd683a891260511f57011b2f436b54dfef146b8aae7473013958a58d5b6039f2a8692c32a2599c8390c5b307d1119ad0d917b414
   languageName: node
   linkType: hard
 
@@ -12581,14 +12576,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pkg-types@npm:^1.1.1, pkg-types@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "pkg-types@npm:1.2.0"
+"pkg-types@npm:^1.2.1":
+  version: 1.3.0
+  resolution: "pkg-types@npm:1.3.0"
   dependencies:
-    confbox: ^0.1.7
-    mlly: ^1.7.1
+    confbox: ^0.1.8
+    mlly: ^1.7.3
     pathe: ^1.1.2
-  checksum: c9ea31be8c7bf0b760c075d5e39f71d90fcebee316e49688345e9095d520ed766f3bfd560227e3f3c28639399a0641a27193eef60c4802d89cb414e21240bbb5
+  checksum: 9637de6bbaceb4cf7c99c098b9286de63382cdd916e9e02c243dcd9f8725650aba7025a80cd7ac085176054b71c07656045b558fe452fe4ed2445383b51d6e24
   languageName: node
   linkType: hard
 
@@ -15851,12 +15846,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"strip-literal@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "strip-literal@npm:2.1.0"
+"strip-literal@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "strip-literal@npm:2.1.1"
   dependencies:
-    js-tokens: ^9.0.0
-  checksum: 37c2072634d2de11a3644fe1bcf4abd566d85e89f0d8e8b10d35d04e7bef962e7c112fbe5b805ce63e59dfacedc240356eeef57976351502966b7c64b742c6ac
+    js-tokens: ^9.0.1
+  checksum: 781f2018b2aa9e8e149882dfa35f4d284c244424e7b66cc62259796dbc4bc6da9d40f9206949ba12fa839f5f643d6c62a309f7eec4ff6e76ced15f0730f04831
   languageName: node
   linkType: hard
 
@@ -16533,14 +16528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ufo@npm:^1.3.0":
-  version: 1.3.2
-  resolution: "ufo@npm:1.3.2"
-  checksum: f1180bb715ff4dd46152fd4dec41c731e84d7b9eaf1432548a0210b2f7e0cd29de125ac88e582c6a079d8ae5bc9ab04ef2bdbafe125086480b10c1006b81bfce
-  languageName: node
-  linkType: hard
-
-"ufo@npm:^1.5.3":
+"ufo@npm:^1.5.4":
   version: 1.5.4
   resolution: "ufo@npm:1.5.4"
   checksum: f244703b7d4f9f0df4f9af23921241ab73410b591f4e5b39c23e3147f3159b139a4b1fb5903189c306129f7a16b55995dac0008e0fbae88a37c3e58cbc34d833
@@ -16597,24 +16585,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unimport@npm:^3.9.0":
-  version: 3.11.1
-  resolution: "unimport@npm:3.11.1"
+"unimport@npm:^3.14.5":
+  version: 3.14.5
+  resolution: "unimport@npm:3.14.5"
   dependencies:
-    "@rollup/pluginutils": ^5.1.0
-    acorn: ^8.12.1
+    "@rollup/pluginutils": ^5.1.3
+    acorn: ^8.14.0
     escape-string-regexp: ^5.0.0
     estree-walker: ^3.0.3
     fast-glob: ^3.3.2
-    local-pkg: ^0.5.0
-    magic-string: ^0.30.11
-    mlly: ^1.7.1
+    local-pkg: ^0.5.1
+    magic-string: ^0.30.14
+    mlly: ^1.7.3
     pathe: ^1.1.2
-    pkg-types: ^1.2.0
+    picomatch: ^4.0.2
+    pkg-types: ^1.2.1
     scule: ^1.3.0
-    strip-literal: ^2.1.0
-    unplugin: ^1.12.2
-  checksum: 19c40d858fcadfaa8b262bb4df014d290c825f21a968f626a04e7801020b696cb19871fe8e1a12c93d43ebf6bc0d236c4a1b20ba74bfe3dd70f952733fd494da
+    strip-literal: ^2.1.1
+    unplugin: ^1.16.0
+  checksum: c9a5e604d96768f4cbf38cb17fdbbbe5c932e1a1b317a0ac53c919d3362aa125c3b3c2ef1ca280f1c33fa9f25a5f7d0a153bf03944f0c1d78afc5c9e6e34fe6e
   languageName: node
   linkType: hard
 
@@ -16666,18 +16655,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unplugin-auto-import@npm:^0.18.0":
-  version: 0.18.2
-  resolution: "unplugin-auto-import@npm:0.18.2"
+"unplugin-auto-import@npm:^0.19.0":
+  version: 0.19.0
+  resolution: "unplugin-auto-import@npm:0.19.0"
   dependencies:
     "@antfu/utils": ^0.7.10
-    "@rollup/pluginutils": ^5.1.0
-    fast-glob: ^3.3.2
-    local-pkg: ^0.5.0
-    magic-string: ^0.30.10
-    minimatch: ^9.0.5
-    unimport: ^3.9.0
-    unplugin: ^1.11.0
+    "@rollup/pluginutils": ^5.1.3
+    local-pkg: ^0.5.1
+    magic-string: ^0.30.15
+    picomatch: ^4.0.2
+    unimport: ^3.14.5
+    unplugin: ^2.1.0
   peerDependencies:
     "@nuxt/kit": ^3.2.2
     "@vueuse/core": "*"
@@ -16686,7 +16674,7 @@ __metadata:
       optional: true
     "@vueuse/core":
       optional: true
-  checksum: 91f89b9040c658047c5409fd2747fc9216cb6a23ec70b08255436d058f40aa0d708f02aeb4f71b3d018423647f39dd7b5f313e6375d8d474823a73772defe8f9
+  checksum: c71dbcdefdb319c71c6613c10e54bb33a9ab1e2101da963e09ef06e2738e6d94aa42695b2916f55ad9a26cd7de608909833013309567fec3726d3f152faf49a5
   languageName: node
   linkType: hard
 
@@ -16731,15 +16719,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unplugin@npm:^1.11.0, unplugin@npm:^1.12.2":
-  version: 1.12.2
-  resolution: "unplugin@npm:1.12.2"
+"unplugin@npm:^1.16.0":
+  version: 1.16.1
+  resolution: "unplugin@npm:1.16.1"
   dependencies:
-    acorn: ^8.12.1
-    chokidar: ^3.6.0
-    webpack-sources: ^3.2.3
+    acorn: ^8.14.0
     webpack-virtual-modules: ^0.6.2
-  checksum: 69daad6c52fe8ce871070d56880cadad7770fa24419ff169eb38b0b481f5578abb27b9963f3ed3b6794a217f0761b5371c2dd3708cdd40417f96ef36f7e259d5
+  checksum: c1e898b746418c56a84979e02177e66286a8805d6b207885bd4a4f975b0bc0c773145a947aa07b6dd0347491e45cd25b56e70516f52610acea986914f250ba49
+  languageName: node
+  linkType: hard
+
+"unplugin@npm:^2.1.0":
+  version: 2.1.2
+  resolution: "unplugin@npm:2.1.2"
+  dependencies:
+    acorn: ^8.14.0
+    webpack-virtual-modules: ^0.6.2
+  checksum: 384576d32eb6472dbe686de2dac1344447096e01edab2fe9eee699532883daab835c9f330b1e0d3d2bc9ca50047c58f7d1b9057725bed78a0926748b2bfafe05
   languageName: node
   linkType: hard
 
