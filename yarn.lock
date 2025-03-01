@@ -7200,7 +7200,7 @@ __metadata:
     react-beautiful-dnd: 13.1.1
     react-dom: 18.2.0
     react-drag-listview: 2.0.0
-    react-error-overlay: 6.0.11
+    react-error-overlay: 6.1.0
     react-router-dom: 6.28.1
     react-scripts: 5.0.1
     tailwindcss: 3.4.17
@@ -14480,7 +14480,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-error-overlay@npm:6.0.11, react-error-overlay@npm:^6.0.11":
+"react-error-overlay@npm:6.1.0":
+  version: 6.1.0
+  resolution: "react-error-overlay@npm:6.1.0"
+  checksum: 4f0785ea14390e333d040e7d7d6f8b915ad9bd4b8ae6eb28e1a5338f23a0325798d20deea7572c3c129bd1d32c432b01e7a4d40ca99710e2fa1f8157929e6cda
+  languageName: node
+  linkType: hard
+
+"react-error-overlay@npm:^6.0.11":
   version: 6.0.11
   resolution: "react-error-overlay@npm:6.0.11"
   checksum: ce7b44c38fadba9cedd7c095cf39192e632daeccf1d0747292ed524f17dcb056d16bc197ddee5723f9dd888f0b9b19c3b486c430319e30504289b9296f2d2c42
